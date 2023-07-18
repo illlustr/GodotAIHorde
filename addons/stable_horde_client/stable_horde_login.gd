@@ -15,7 +15,7 @@ func login() -> void:
 	state = States.WORKING
 	var headers = [
 		"Content-Type: application/json", "apikey: " + api_key,
-		"Client-Agent: " + "Lucid Creations:" + ToolConsts.VERSION + ":db0#1625"
+		"Client-Agent: " + "Lucid Creations:" + "ToolConsts.VERSION" + ":db0#1625"
 	]
 	var error = request("https://aihorde.net/api/v2/find_user", headers, false, HTTPClient.METHOD_GET)
 	if error != OK:

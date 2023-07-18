@@ -13,7 +13,7 @@ func submit_rating(request_id: String, ratings_payload: Dictionary) -> void:
 	var url = "https://aihorde.net/api/v2/generate/rate/" + request_id
 	var headers = [
 		"Content-Type: application/json", 
-		"Client-Agent: " + "Lucid Creations:" + ToolConsts.VERSION + ":(discord)db0#1625"
+		"Client-Agent: " + "Lucid Creations:" + "ToolConsts.VERSION" + ":(discord)db0#1625"
 	]
 	# print_debug(url)
 	# print_debug(body)

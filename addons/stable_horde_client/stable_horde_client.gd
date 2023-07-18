@@ -144,7 +144,7 @@ func generate(replacement_prompt := '', replacement_params := {}) -> void:
 	var headers = [
 		"Content-Type: application/json", 
 		"apikey: " + api_key,
-		"Client-Agent: " + "Lucid Creations:" + ToolConsts.VERSION + ":db0#1625",
+		"Client-Agent: " + "Lucid Creations:" + "ToolConsts.VERSION" + ":db0#1625",
 	]
 	var error = request("https://aihorde.net/api/v2/generate/async", headers, false, HTTPClient.METHOD_POST, body)
 	if error != OK:
@@ -194,7 +194,7 @@ func check_request_process(operation := OngoingRequestOperations.CHECK) -> void:
 	push_warning('State:' + str(state))
 	var error = request(
 		url, 
-		["Client-Agent: " + "Lucid Creations:" + ToolConsts.VERSION + ":db0#1625"], 
+		["Client-Agent: " + "Lucid Creations:" + "ToolConsts.VERSION" + ":db0#1625"], 
 		false, 
 		method)
 	if state == States.WORKING and error != OK:
